@@ -40,31 +40,37 @@ webpack # thư mục gốc
 Đầu tiên, khởi tạo 1 dự án ở đây là dự án của mình có tên là `webpack`. Sau khi khởi tạo xong tiến hành cài đặt môi trường cần thiết.
 
 **Cài đặt thư viện node**
-> ở đây mình sử dụng yarn. Thông tin mô tả dự án mình bấm next hết cho nhanh 😁.
 
 ```
 yarn init
-
 ```
 
 Sau khi khởi tạo dự án thành công bạn sẽ thấy file package.json được tạo trong thư mục dự án.
-> package.json là file chứa thông tin dự án như: tên dự án, phiên bản, mô tả, các thư viện được sử dụng trong dự án, v.v
+> package.json là file chứa thông tin dự án như: tên dự án, phiên bản, mô tả, các thư viện được sử dụng trong dự án, v.v 😁.
 
 
 **Cài đặt Webpack**
 
 Chạy lệnh sau để cài đặt 2 thư viện là webpack và webpack-cli:
 ```bash
-npm install webpack webpack-cli --save-dev
+yarn add webpack webpack-cli --save-dev
 ```
 
---save-dev để đánh dấu 2 thư viện này chỉ dùng trong khi phát triển, khi dự án đẩy lên production sẽ không có các thư viện này.
+> --save-dev để đánh dấu 2 thư viện này chỉ dùng trong khi phát triển, khi dự án đẩy lên production sẽ không có các thư viện này.
 Sau khi lệnh trên chạy xong, webpack và webpack-cli sẽ được thêm vào devDependencies:
+
 ![ảnh sau khi cài đặt webpack](https://files.fullstack.edu.vn/f8-prod/blog_posts/279/6153d30c70fe1.png)
 
 > devDependencies chứa các thư viện được cài đặt với flag --save-dev.
-- **devDependencies** là những module sẽ chỉ được dùng vào mục đích phát triển sản phẩm
-- **dependencies** là những module sẽ được sử dụng trong quá trình chạy sản phẩm thực tế.
+- **devDependencies:** những module nằm trong đây chỉ dùng trong khi phát triển, khi dự án đẩy lên production sẽ không có các thư viện này.
+> yarn add <package...> [--dev/-D] Using --dev or -D will install one or more packages in your devDependencies.
+
+
+> --save-dev để đánh dấu 2 thư viện này chỉ dùng trong khi phát triển, khi dự án đẩy lên production sẽ không có các thư viện này
+- **dependencies:** là những module nằm trong đây sẽ được sử dụng trong quá trình chạy sản phẩm thực tế.
+- `yarn add <package...>`: This will install one or more packages in your dependencies.
+
+ 
 
 
 **Cài đặt React và React-DOM**
